@@ -1,0 +1,32 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"database-info" : null,
+	"dir-cur-bld" : "C:/Users/f.willems/CLionProjects/Toolbox/build",
+	"dir-cur-src" : "C:/Users/f.willems/CLionProjects/Toolbox",
+	"dir-top-bld" : "C:/Users/f.willems/CLionProjects/Toolbox/build",
+	"dir-top-src" : "C:/Users/f.willems/CLionProjects/Toolbox",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir",
+	"sources" : 
+	{
+		"CMakeFiles/Toolbox.dir/baseline/BinBaseline.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/baseline/BinBaseline.cpp"
+		},
+		"CMakeFiles/Toolbox.dir/main.cpp.obj" : 
+		{
+			"language" : "CXX",
+			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/main.cpp"
+		}
+	}
+}

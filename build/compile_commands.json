@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\Toolbox.dir\\baseline\\BinBaseline.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\Toolbox.dir\\baseline\\BinBaseline.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\baseline\\BinBaseline.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/baseline/BinBaseline.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir/baseline/BinBaseline.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\Toolbox.dir\\main.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\Toolbox.dir\\main.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\main.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/main.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\ToolboxDLL.dir\\baseline\\BinBaseline.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\ToolboxDLL.dir\\baseline\\BinBaseline.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\baseline\\BinBaseline.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/baseline/BinBaseline.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir/baseline/BinBaseline.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\ToolboxDLL.dir\\api\\API.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\ToolboxDLL.dir\\api\\API.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\api\\API.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/api/API.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir/api/API.cpp.obj"
+}
+]
