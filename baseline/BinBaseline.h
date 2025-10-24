@@ -8,10 +8,8 @@
 #include "../var_needed.h"
 #include"..//models/Bin.h"
 
-class BinBaseline {
-    public:
-    static std::vector<double> estimate(const std::vector<double> &counts);
-    
+namespace BinBaseline {
+    std::vector<double> estimate(const std::vector<double> &counts);
 };
 
 
