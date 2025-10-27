@@ -9,13 +9,19 @@ constexpr double FWHM_OFFSET = 5;
 constexpr double FWHM_SLOPE = 15;
 constexpr double FWHM_QUAD = 30;
 
+
 constexpr double channel_to_energy(const int channel) {
     return FWHM_OFFSET + channel * FWHM_SLOPE + FWHM_QUAD * channel * channel;
 }
 
-constexpr double FWHM(const int channel) {
+constexpr double FWHM(const double energy) {
     //TODO
     return 1;
+}
+
+constexpr double dEdk(const int channel) {
+    //TODO
+    return 1.0;
 }
 
 
