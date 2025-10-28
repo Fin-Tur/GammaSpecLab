@@ -6,12 +6,13 @@
 #include "../models/Bin.h"
 #include "../models/Peak.h"
 #include "../models/FitOut.h"
+#include "../models/LinearBGCtx.h"
+#include "../models/EC.h"
 
 namespace GammaMBibSearch {
 
-    auto fwhm_at = [&](double energy){ return TOOLBOX_VAR_NEEDED_H::FWHM(energy);}; 
-    auto energy_at = [&](int channel){ return TOOLBOX_VAR_NEEDED_H::channel_to_energy(channel);};
-
+    LinearBGCtx make_linear_bg_ctx(const std::vector<double> &counts, int lR, int rR, int n);
+    double calc_y_linear(const std::vector<double> &counts, LinearBGCtx &bg_ctx, int channel);
     double sigma2_genie_linear_bg(int i);
     double calculate_spectral_gradient(const std::vector<double> &counts, int channel);
     double gaussian_base(int channel, int peak_center, double z);

@@ -5,24 +5,22 @@
 #ifndef TOOLBOX_VAR_NEEDED_H
 #define TOOLBOX_VAR_NEEDED_H
 
-constexpr double FWHM_OFFSET = 5;
-constexpr double FWHM_SLOPE = 15;
-constexpr double FWHM_QUAD = 30;
+//Example calibration parameters
+//TODDO : Replace with actual calibration data
+constexpr double EC_OFFSET = 1;
+constexpr double EC_SLOPE = 1;
+constexpr double EC_QUAD = 1;
 
+constexpr double FWHM_OFFSET = 1;
+constexpr double FWHM_SLOPE = 1;
+constexpr double FWHM_QUAD = 1;
 
-constexpr double channel_to_energy(const int channel) {
-    return FWHM_OFFSET + channel * FWHM_SLOPE + FWHM_QUAD * channel * channel;
-}
 
 constexpr double FWHM(const double energy) {
     //TODO
     return 1;
 }
 
-constexpr double dEdk(const int channel) {
-    //TODO
-    return 1.0;
-}
 
 
 #endif //TOOLBOX_VAR_NEEDED_H
