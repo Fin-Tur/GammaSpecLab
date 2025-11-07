@@ -5,14 +5,13 @@
 #include "baseline/BinBaseline.h"
 #include <FWHMC.h>
 
-
 using Eigen::MatrixXd; using Eigen::VectorXd;
 
 static thread_local LinearBGCtx last_bg_ctx;
-//For further processing, we will expect this vector to be filled with our library peaks
+//For further processing, we will expect this to be filled
 static thread_local std::vector<Peak> expected_peaks;
-static thread_local FWHMC fwhm_model{FWHM_OFFSET, FWHM_SLOPE, FWHM_QUAD};
-static thread_local EC ec_model{EC_OFFSET, EC_SLOPE, EC_QUAD};
+static thread_local FWHMC fwhm_model;
+static thread_local EC ec_model;
 
 //Calculates spectral gradient of spectrum at given channel
 double GammaMBibSearch::calculate_spectral_gradient(const std::vector<double> &counts, int channel) {
@@ -130,14 +129,19 @@ FitOut GammaMBibSearch::fit_with_Q0_energy(const std::vector<double>& Ycorr, int
     for(int it = 0; it < 8; ++it){
         fit_result = fit_once_energy(Ycorr, lR, rR, peak_center, z_keV, Ec);
         const double dQ0 = fit_result.Q0 - last_Q0;
-        if(std::abs(dQ0) < 1e-3) break; //Convergence test
+        if(std::abs(dQ0) < 1e-3) break; //Convergence test - anpassung?
         Ec += fit_result.Q0;
         last_Q0 = fit_result.Q0;
     }
     return fit_result;
 }
 
-std::vector<FitOut> GammaMBibSearch::search(const std::vector<double> &counts) {
+std::vector<FitOut> GammaMBibSearch::search(const std::vector<double> &counts, const std::vector<Peak>& library_peaks, const EC& calibration_ec, const FWHMC& calibration_fwhm) {
+
+    expected_peaks = library_peaks;
+    ec_model = calibration_ec;
+    fwhm_model = calibration_fwhm;
+
     std::vector<FitOut> detected_peaks;
 
     //Parameters: E(channel_to_energy(peak_center)), Z(peak_width*sqrt(2)) are given by the Library and Calibration

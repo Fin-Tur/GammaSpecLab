@@ -2,7 +2,6 @@
 #define TOOLBOX_GAMMABIBSEARCH_H
 
 #include <vector>
-#include "../var_needed.h"
 #include "../models/Bin.h"
 #include "../models/Peak.h"
 #include "../models/FitOut.h"

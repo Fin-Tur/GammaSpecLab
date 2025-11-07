@@ -7,6 +7,9 @@
 #include "BinBaseline.h"
 
 #include <cmath>
+#include "../models/FWHMC.h"
+
+static thread_local FWHMC fwhm_model;
 
 std::vector<double> BinBaseline::estimate(const std::vector<double> &counts) {
 
@@ -19,8 +22,8 @@ std::vector<double> BinBaseline::estimate(const std::vector<double> &counts) {
 
     int n_counts = counts.size();
     if(n_counts <= 0) return counts;
-    auto f1   = std::max(1., (double)FWHM(1));
-    auto fmid = std::max(1., (double)FWHM(std::max(1, n_counts/2)));
+    auto f1   = std::max(1., (double)fwhm_model.fwhm_at(1));
+    auto fmid = std::max(1., (double)fwhm_model.fwhm_at(std::max(1, n_counts/2)));
 
     int number_of_bins = n_counts * f1 / (fmid * k);
 
@@ -33,14 +36,14 @@ std::vector<double> BinBaseline::estimate(const std::vector<double> &counts) {
     std::vector<std::vector<Bin>> plys(number_of_plys);
     std::vector<Bin> bins(number_of_bins);
     bins[0].min_x = 0;
-    bins[0].bin_width = k * FWHM(1);
+    bins[0].bin_width = k * fwhm_model.fwhm_at(1);
     bins[0].center_x = bins[0].min_x + bins[0].bin_width * 0.5;
     plys[0].emplace_back(bins[0]);
 
     for (int i = 1; i < number_of_bins; i++) {
         Bin& bin = bins[i];
         bin.min_x = bins[i-1].min_x + bins[i-1].bin_width;
-        bin.bin_width = std::max(k * FWHM(bin.min_x), 1.);
+        bin.bin_width = std::max(k * fwhm_model.fwhm_at(bin.min_x), 1.);
         bin.center_x = bin.min_x + bin.bin_width * 0.5;
         //Calculate median channel counts
         double sum_counts = 0;

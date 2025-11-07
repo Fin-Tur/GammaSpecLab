@@ -6,6 +6,8 @@ struct EC {
     double slope;
     double quad;
 
+    EC(double offset, double slope, double quad) : offset(offset), slope(slope), quad(quad) {}
+
     inline double energy_at(int channel) const {
         return offset + channel * slope + quad * channel * channel;
     }

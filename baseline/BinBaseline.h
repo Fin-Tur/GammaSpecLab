@@ -5,7 +5,6 @@
 #ifndef TOOLBOX_BINBASELINE_H
 #define TOOLBOX_BINBASELINE_H
 #include <vector>
-#include "../var_needed.h"
 #include"..//models/Bin.h"
 
 namespace BinBaseline {

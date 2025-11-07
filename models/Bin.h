@@ -10,7 +10,7 @@ struct Bin {
     float min_x;
     float center_x;
     double count_average;
-    Bin();
+
     Bin(double min_x, double bin_width){
         this->min_x = min_x;
         this->bin_width = bin_width;
