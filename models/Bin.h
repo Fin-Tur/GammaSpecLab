@@ -2,8 +2,7 @@
 // Created by f.willems on 20.10.2025.
 //
 
-#ifndef TOOLBOX_BIN_H
-#define TOOLBOX_BIN_H
+#pragma once
 
 struct Bin {
     float bin_width;
@@ -18,5 +17,3 @@ struct Bin {
         this->count_average = 0.0;
     }
 };
-
-#endif //TOOLBOX_BIN_H

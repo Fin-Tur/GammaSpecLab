@@ -5,7 +5,8 @@
         double b0; 
         double b1; 
         double Q0; 
-        double counts_center; 
+        double counts_center; //FIXME what?
+        double z_keV;
 
     };
 
