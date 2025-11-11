@@ -6,8 +6,8 @@ struct LinearBGCtx {
     int rR;
     int n;
     int N;
-    int B0;
-    int B1;
+    double B0;
+    double B1;
 };
 
 #endif //LINEAR_BG_CTX_H

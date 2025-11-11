@@ -19,10 +19,10 @@ namespace GammaMBibSearch {
     double gaussian_corrected(const BibSearchCtx& ctx, int channel, int peak_center, int counts_center, double z, double spec_gradient, double Q0);
     double gaussian_corrected_with_offset(const BibSearchCtx& ctx, int channel, int peak_center, int counts_center, double z, double spec_gradient, double Q0, double B0, double B1);
 
-    FitOut fit_once_energy(const BibSearchCtx& ctx, int peak_center, double z_keV, double Ec_keV);
-    FitOut fit_with_Q0_energy(const BibSearchCtx& ctx, int peak_center, double z_keV);
+    FitOut fit_once_energy(const BibSearchCtx &ctx, const std::vector<double>& Ycorr, int peak_center, double z_keV, double Ec_keV);
+    FitOut fit_with_Q0_energy(const BibSearchCtx &ctx, const std::vector<double>& Ycorr, int peak_center, double z_keV);
 
-    std::vector<FitOut> search(const BibSearchCtx& ctx);
+    std::vector<std::pair<Nuclid, FitOut>> search(BibSearchCtx& ctx);
 };
 
 #endif //TOOLBOX_GAMMABIBSEARCH_H

@@ -14,6 +14,7 @@ struct BibSearchCtx{
     FWHMC fwhm_model;
     EC ec_model;
     std::vector<double> counts;
+    std::vector<double> baseline;
 
     //user dependent
     double Q0_conv_tol;

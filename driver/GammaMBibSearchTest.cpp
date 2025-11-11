@@ -4,6 +4,7 @@
 #include <assert.h>
 #include "../finding/GammaMBibSearch.h"
 #include <cmath>
+#include "../baseline/BinBaseline.h"
 
 class GammaMBibSearchTest{
     public:
@@ -35,20 +36,10 @@ void GammaMBibSearchTest::initialize_testing_environment(){
     EC ec_model = EC{0.0, 0.5, 1e-4};
     std::vector<Nuclid> expected_nuclides = nuclideLibrary.getNuclideList();
 
-    ctx = BibSearchCtx{expected_nuclides, fwhm_model, ec_model, counts, 1e-3, 8};
+    std::vector<double> baseline = BinBaseline::estimate(ctx.counts);
 
-}
+    ctx = BibSearchCtx{expected_nuclides, fwhm_model, ec_model, counts, baseline, 1e-3, 8};
 
-double GammaMBibSearchTest::get_median_diff_from_expected(const FitOut& fit, const Nuclid& nucl){
-        int ck = ctx.ec_model.channel_at(nucl.gamma_energy);
-        double Ec = ctx.ec_model.energy_at(ck);
-        double FWHM_keV = ctx.fwhm_model.fwhm_at(Ec);
-        double z_keV = FWHM_keV / (std::sqrt(2.0*std::log(2)));
-
-    for(int i = ctx.bg_ctx.lR; i <= ctx.bg_ctx.rR; ++i){
-
-    }
-    return 0.0;
 }
 
 bool GammaMBibSearchTest::test_gamma_m_bib_search(){
@@ -58,7 +49,8 @@ bool GammaMBibSearchTest::test_gamma_m_bib_search(){
     assert(ctx.iter > 0);
     assert(!ctx.counts.empty());
 
-    std::vector<FitOut> results = GammaMBibSearch::search(ctx);
+
+    std::vector<std::pair<Nuclid, FitOut>> results = GammaMBibSearch::search(ctx);
     assert(!results.empty());
 
     std::ofstream outputFile("path/to/output.txt");
@@ -66,8 +58,9 @@ bool GammaMBibSearchTest::test_gamma_m_bib_search(){
         throw std::runtime_error("Could not open output file.");
     }
     for (const auto& fit : results) {
-        outputFile << "B0:" << fit.b0 << "  B1:" << fit.b1 << " Q0:" << fit.Q0 << " Height:" << fit.counts_center << "\n";   
-        outputFile << "Median difference from expected: " << get_median_diff_from_expected(fit) << "\n"; //FIXME need nuclide here?
+        outputFile << "Nuclide: Z=" << fit.first.atomic_number << " A=" << fit.first.mass_number << "\n";
+        outputFile << "B0:" << fit.second.b0 << "  B1:" << fit.second.b1 << " Q0:" << fit.second.Q0 << " Counts(Center):" << fit.second.counts_center << "\n";
+        outputFile << "(Chi^2)/dof: " << fit.second.reduced_chi2 << "\n";
         outputFile << "-----------------------------------\n";
 
     }

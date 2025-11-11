@@ -17,21 +17,21 @@ double GammaMBibSearch::calculate_spectral_gradient(const BibSearchCtx &ctx, int
 }
 
 //calcs linear_bg_ctx
-LinearBGCtx GammaMBibSearch::make_linear_bg_ctx(const std::vector<double> &counts, int lR, int rR, int n){
+LinearBGCtx GammaMBibSearch::make_linear_bg_ctx(const BibSearchCtx &ctx, int lR, int rR, int n){
     int N = rR - lR +1;
     double B0 = 0.0, B1 = 0.0;
     for(int i = std::max(0, lR - n); i <= lR -1; ++i){
-        B0 += counts[i];
+        B0 += ctx.counts[i];
     }   
-    for(int i = rR +1; i <= std::min(static_cast<int>(counts.size()-1), rR + n); ++i){
-        B1 += counts[i];
+    for(int i = rR +1; i <= std::min(static_cast<int>(ctx.counts.size()-1), rR + n); ++i){
+        B1 += ctx.counts[i];
     }
     return {lR, rR, n, N, B0, B1};
 }
 
 //calcs y_linear after bg removal GM:(6) 
 //eigentlich unnötig warum habe ich das überhaupt gesachrieben ??
-double GammaMBibSearch::calc_y_linear(BibSearchCtx& ctx, int channel){
+double GammaMBibSearch::calc_y_linear(const BibSearchCtx& ctx, int channel){
     if(!(channel >= ctx.bg_ctx.lR && channel <= ctx.bg_ctx.rR)) {
         return ctx.counts[channel];
     }
@@ -108,12 +108,18 @@ FitOut GammaMBibSearch::fit_once_energy(const BibSearchCtx &ctx, const std::vect
     Eigen::ColPivHouseholderQR<MatrixXd> qr(Ahat);
     VectorXd theta = qr.solve(yhat);
 
-    double Q0 = theta(2) - 1.0; //dY/dE coefficient
+    VectorXd residuals = y - A * theta;
+
+    double chi2 = residuals.transpose() * (w.asDiagonal() * residuals);
+    int dof = A.rows()- A.cols();
+    double reduced_chi2 = (dof > 0) ? chi2 / dof : 1.0;
+
     return {
         theta(0), //b0
         theta(1), //b1
-        Q0,
-        theta(3)  //counts_center
+        theta(2), //Q0
+        theta(3),  //counts_center
+        reduced_chi2 //fit quality
     };
 }
 
@@ -133,16 +139,12 @@ FitOut GammaMBibSearch::fit_with_Q0_energy(const BibSearchCtx &ctx, const std::v
     return fit_result;
 }
 
-std::vector<FitOut> GammaMBibSearch::search(BibSearchCtx& ctx) {
+std::vector<std::pair<Nuclid, FitOut>> GammaMBibSearch::search(BibSearchCtx& ctx) {
 
-    std::vector<FitOut> detected_peaks;
+    std::vector<std::pair<Nuclid, FitOut>> detected_peaks;
 
-    //Parameters: E(channel_to_energy(peak_center)), Z(peak_width*sqrt(2)) are given by the Library and Calibration
-    //Fitting can be continued linearly from there
-
-    std::vector<double> baseline = BinBaseline::estimate(ctx.counts);
     std::vector<double> corrected_spectrum(ctx.counts.size());
-    std::transform(ctx.counts.begin(), ctx.counts.end(), baseline.begin(), corrected_spectrum.begin(), [](double count, double base) { return count - base; });
+    std::transform(ctx.counts.begin(), ctx.counts.end(), ctx.baseline.begin(), corrected_spectrum.begin(), [](double count, double base) { return count - base; });
 
     for(auto& nucl : ctx.expected_nuclides) {
 
@@ -160,13 +162,12 @@ std::vector<FitOut> GammaMBibSearch::search(BibSearchCtx& ctx) {
         int n = 1;
         //Important: lR-n and rR+n must be valid indices
 
-        ctx.bg_ctx = make_linear_bg_ctx(corrected_spectrum, lR, rR, n);
+        ctx.bg_ctx = make_linear_bg_ctx(ctx, lR, rR, n);
 
         auto fit = fit_with_Q0_energy(ctx, corrected_spectrum, ck, z_keV);
-        detected_peaks.emplace_back(fit);
+        
+        detected_peaks.emplace_back(std::make_pair(nucl, fit));
 
-
-        //TODO: chi^2 calculation and quality check to see if nucl is in range
     }
 
 
