@@ -2,11 +2,11 @@
 #define TOOLBOX_GAMMABIBSEARCH_H
 
 #include <vector>
-#include "../models/Bin.h"
-#include "../models/FitOut.h"
-#include "../models/LinearBGCtx.h"
-#include "../models/EC.h"
-#include "../models/BibSearchCtx.h"
+#include "../models/elements/Bin.h"
+#include "../models/elements/FitOut.h"
+#include "../models/ctx/LinearBGCtx.h"
+#include "../models/cal/EC.h"
+#include "../models/ctx/BibSearchCtx.h"
 
 namespace GammaMBibSearch {
 

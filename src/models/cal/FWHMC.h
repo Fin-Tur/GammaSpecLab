@@ -13,6 +13,11 @@ struct FWHMC
         return offset + energy * slope + quad * energy * energy;
     }
 
+    inline double fwhm_at_channel(int channel) const{
+        double return_dummy = 1; //FIXME imlementation fwhm channel, or conversion from fwhm_at (energy)
+        return return_dummy;
+    }
+
 };
 
 
