@@ -2,7 +2,8 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
-#include "Nuclid.h"
+#include "../models/Nuclid.h"
+#include <optional>
 
 class NuclidLibrary {
 

@@ -1,10 +1,11 @@
 #include <fstream>
-#include <NuclidLibrary.h>
-#include <BibSearchCtx.h>
 #include <assert.h>
-#include "../finding/GammaMBibSearch.h"
 #include <cmath>
+
 #include "../baseline/BinBaseline.h"
+#include "../nuclides/NuclidLibrary.h"
+#include "../models/BibSearchCtx.h"
+#include "../finding/GammaMBibSearch.h"
 
 class GammaMBibSearchTest{
     public:

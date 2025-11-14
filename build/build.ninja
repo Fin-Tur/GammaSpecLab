@@ -66,6 +66,91 @@ build CMakeFiles/Toolbox.dir/baseline/BinBaseline.cpp.obj: CXX_COMPILER__Toolbox
   TARGET_SUPPORT_DIR = CMakeFiles\Toolbox.dir
   dyndep = CMakeFiles/Toolbox.dir/CXX.dd
 
+build CMakeFiles/Toolbox.dir/baseline/AlsBaseline.cpp.obj.ddi: CXX_SCAN__Toolbox_Debug C$:/Users/f.willems/CLionProjects/Toolbox/baseline/AlsBaseline.cpp || cmake_object_order_depends_target_Toolbox
+  DEP_FILE = CMakeFiles\Toolbox.dir\baseline\AlsBaseline.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\Toolbox.dir\baseline\AlsBaseline.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20
+  OBJ_FILE = CMakeFiles\Toolbox.dir\baseline\AlsBaseline.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\Toolbox.dir\baseline\AlsBaseline.cpp.obj.ddi.i
+
+build CMakeFiles/Toolbox.dir/baseline/AlsBaseline.cpp.obj: CXX_COMPILER__Toolbox_scanned_Debug C$:/Users/f.willems/CLionProjects/Toolbox/baseline/AlsBaseline.cpp | CMakeFiles/Toolbox.dir/baseline/AlsBaseline.cpp.obj.modmap || cmake_object_order_depends_target_Toolbox CMakeFiles/Toolbox.dir/CXX.dd
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\Toolbox.dir\baseline\AlsBaseline.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\Toolbox.dir\baseline\AlsBaseline.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\Toolbox.dir
+  OBJECT_FILE_DIR = CMakeFiles\Toolbox.dir\baseline
+  TARGET_SUPPORT_DIR = CMakeFiles\Toolbox.dir
+  dyndep = CMakeFiles/Toolbox.dir/CXX.dd
+
+build CMakeFiles/Toolbox.dir/nuclides/NuclidLibrary.cpp.obj.ddi: CXX_SCAN__Toolbox_Debug C$:/Users/f.willems/CLionProjects/Toolbox/nuclides/NuclidLibrary.cpp || cmake_object_order_depends_target_Toolbox
+  DEP_FILE = CMakeFiles\Toolbox.dir\nuclides\NuclidLibrary.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\Toolbox.dir\nuclides\NuclidLibrary.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20
+  OBJ_FILE = CMakeFiles\Toolbox.dir\nuclides\NuclidLibrary.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\Toolbox.dir\nuclides\NuclidLibrary.cpp.obj.ddi.i
+
+build CMakeFiles/Toolbox.dir/nuclides/NuclidLibrary.cpp.obj: CXX_COMPILER__Toolbox_scanned_Debug C$:/Users/f.willems/CLionProjects/Toolbox/nuclides/NuclidLibrary.cpp | CMakeFiles/Toolbox.dir/nuclides/NuclidLibrary.cpp.obj.modmap || cmake_object_order_depends_target_Toolbox CMakeFiles/Toolbox.dir/CXX.dd
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\Toolbox.dir\nuclides\NuclidLibrary.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\Toolbox.dir\nuclides\NuclidLibrary.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\Toolbox.dir
+  OBJECT_FILE_DIR = CMakeFiles\Toolbox.dir\nuclides
+  TARGET_SUPPORT_DIR = CMakeFiles\Toolbox.dir
+  dyndep = CMakeFiles/Toolbox.dir/CXX.dd
+
+build CMakeFiles/Toolbox.dir/finding/GammaMBibSearch.cpp.obj.ddi: CXX_SCAN__Toolbox_Debug C$:/Users/f.willems/CLionProjects/Toolbox/finding/GammaMBibSearch.cpp || cmake_object_order_depends_target_Toolbox
+  DEP_FILE = CMakeFiles\Toolbox.dir\finding\GammaMBibSearch.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\Toolbox.dir\finding\GammaMBibSearch.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20
+  OBJ_FILE = CMakeFiles\Toolbox.dir\finding\GammaMBibSearch.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\Toolbox.dir\finding\GammaMBibSearch.cpp.obj.ddi.i
+
+build CMakeFiles/Toolbox.dir/finding/GammaMBibSearch.cpp.obj: CXX_COMPILER__Toolbox_scanned_Debug C$:/Users/f.willems/CLionProjects/Toolbox/finding/GammaMBibSearch.cpp | CMakeFiles/Toolbox.dir/finding/GammaMBibSearch.cpp.obj.modmap || cmake_object_order_depends_target_Toolbox CMakeFiles/Toolbox.dir/CXX.dd
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\Toolbox.dir\finding\GammaMBibSearch.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\Toolbox.dir\finding\GammaMBibSearch.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\Toolbox.dir
+  OBJECT_FILE_DIR = CMakeFiles\Toolbox.dir\finding
+  TARGET_SUPPORT_DIR = CMakeFiles\Toolbox.dir
+  dyndep = CMakeFiles/Toolbox.dir/CXX.dd
+
+build CMakeFiles/Toolbox.dir/driver/GammaMBibSearchDriver.cpp.obj.ddi: CXX_SCAN__Toolbox_Debug C$:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchDriver.cpp || cmake_object_order_depends_target_Toolbox
+  DEP_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchDriver.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchDriver.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20
+  OBJ_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchDriver.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchDriver.cpp.obj.ddi.i
+
+build CMakeFiles/Toolbox.dir/driver/GammaMBibSearchDriver.cpp.obj: CXX_COMPILER__Toolbox_scanned_Debug C$:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchDriver.cpp | CMakeFiles/Toolbox.dir/driver/GammaMBibSearchDriver.cpp.obj.modmap || cmake_object_order_depends_target_Toolbox CMakeFiles/Toolbox.dir/CXX.dd
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchDriver.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchDriver.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\Toolbox.dir
+  OBJECT_FILE_DIR = CMakeFiles\Toolbox.dir\driver
+  TARGET_SUPPORT_DIR = CMakeFiles\Toolbox.dir
+  dyndep = CMakeFiles/Toolbox.dir/CXX.dd
+
+build CMakeFiles/Toolbox.dir/driver/GammaMBibSearchTest.cpp.obj.ddi: CXX_SCAN__Toolbox_Debug C$:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchTest.cpp || cmake_object_order_depends_target_Toolbox
+  DEP_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchTest.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchTest.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20
+  OBJ_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchTest.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchTest.cpp.obj.ddi.i
+
+build CMakeFiles/Toolbox.dir/driver/GammaMBibSearchTest.cpp.obj: CXX_COMPILER__Toolbox_scanned_Debug C$:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchTest.cpp | CMakeFiles/Toolbox.dir/driver/GammaMBibSearchTest.cpp.obj.modmap || cmake_object_order_depends_target_Toolbox CMakeFiles/Toolbox.dir/CXX.dd
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchTest.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\Toolbox.dir\driver\GammaMBibSearchTest.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\Toolbox.dir
+  OBJECT_FILE_DIR = CMakeFiles\Toolbox.dir\driver
+  TARGET_SUPPORT_DIR = CMakeFiles\Toolbox.dir
+  dyndep = CMakeFiles/Toolbox.dir/CXX.dd
+
 build CMakeFiles/Toolbox.dir/main.cpp.obj.ddi: CXX_SCAN__Toolbox_Debug C$:/Users/f.willems/CLionProjects/Toolbox/main.cpp || cmake_object_order_depends_target_Toolbox
   DEP_FILE = CMakeFiles\Toolbox.dir\main.cpp.obj.ddi.d
   DYNDEP_INTERMEDIATE_FILE = CMakeFiles\Toolbox.dir\main.cpp.obj.ddi
@@ -83,7 +168,7 @@ build CMakeFiles/Toolbox.dir/main.cpp.obj: CXX_COMPILER__Toolbox_scanned_Debug C
   TARGET_SUPPORT_DIR = CMakeFiles\Toolbox.dir
   dyndep = CMakeFiles/Toolbox.dir/CXX.dd
 
-build CMakeFiles/Toolbox.dir/CXX.dd | CMakeFiles/Toolbox.dir/CXXModules.json CMakeFiles/Toolbox.dir/baseline/BinBaseline.cpp.obj.modmap CMakeFiles/Toolbox.dir/main.cpp.obj.modmap: CXX_DYNDEP__Toolbox_Debug CMakeFiles/Toolbox.dir/baseline/BinBaseline.cpp.obj.ddi CMakeFiles/Toolbox.dir/main.cpp.obj.ddi | C$:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir/CXXDependInfo.json
+build CMakeFiles/Toolbox.dir/CXX.dd | CMakeFiles/Toolbox.dir/CXXModules.json CMakeFiles/Toolbox.dir/baseline/BinBaseline.cpp.obj.modmap CMakeFiles/Toolbox.dir/baseline/AlsBaseline.cpp.obj.modmap CMakeFiles/Toolbox.dir/nuclides/NuclidLibrary.cpp.obj.modmap CMakeFiles/Toolbox.dir/finding/GammaMBibSearch.cpp.obj.modmap CMakeFiles/Toolbox.dir/driver/GammaMBibSearchDriver.cpp.obj.modmap CMakeFiles/Toolbox.dir/driver/GammaMBibSearchTest.cpp.obj.modmap CMakeFiles/Toolbox.dir/main.cpp.obj.modmap: CXX_DYNDEP__Toolbox_Debug CMakeFiles/Toolbox.dir/baseline/BinBaseline.cpp.obj.ddi CMakeFiles/Toolbox.dir/baseline/AlsBaseline.cpp.obj.ddi CMakeFiles/Toolbox.dir/nuclides/NuclidLibrary.cpp.obj.ddi CMakeFiles/Toolbox.dir/finding/GammaMBibSearch.cpp.obj.ddi CMakeFiles/Toolbox.dir/driver/GammaMBibSearchDriver.cpp.obj.ddi CMakeFiles/Toolbox.dir/driver/GammaMBibSearchTest.cpp.obj.ddi CMakeFiles/Toolbox.dir/main.cpp.obj.ddi | C$:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir/CXXDependInfo.json
 
 
 # =============================================================================
@@ -93,7 +178,7 @@ build CMakeFiles/Toolbox.dir/CXX.dd | CMakeFiles/Toolbox.dir/CXXModules.json CMa
 #############################################
 # Link the executable Toolbox.exe
 
-build Toolbox.exe: CXX_EXECUTABLE_LINKER__Toolbox_Debug CMakeFiles/Toolbox.dir/baseline/BinBaseline.cpp.obj CMakeFiles/Toolbox.dir/main.cpp.obj
+build Toolbox.exe: CXX_EXECUTABLE_LINKER__Toolbox_Debug CMakeFiles/Toolbox.dir/baseline/BinBaseline.cpp.obj CMakeFiles/Toolbox.dir/baseline/AlsBaseline.cpp.obj CMakeFiles/Toolbox.dir/nuclides/NuclidLibrary.cpp.obj CMakeFiles/Toolbox.dir/finding/GammaMBibSearch.cpp.obj CMakeFiles/Toolbox.dir/driver/GammaMBibSearchDriver.cpp.obj CMakeFiles/Toolbox.dir/driver/GammaMBibSearchTest.cpp.obj CMakeFiles/Toolbox.dir/main.cpp.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -131,6 +216,91 @@ build CMakeFiles/ToolboxDLL.dir/baseline/BinBaseline.cpp.obj: CXX_COMPILER__Tool
   TARGET_SUPPORT_DIR = CMakeFiles\ToolboxDLL.dir
   dyndep = CMakeFiles/ToolboxDLL.dir/CXX.dd
 
+build CMakeFiles/ToolboxDLL.dir/baseline/AlsBaseline.cpp.obj.ddi: CXX_SCAN__ToolboxDLL_Debug C$:/Users/f.willems/CLionProjects/Toolbox/baseline/AlsBaseline.cpp || cmake_object_order_depends_target_ToolboxDLL
+  DEP_FILE = CMakeFiles\ToolboxDLL.dir\baseline\AlsBaseline.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\ToolboxDLL.dir\baseline\AlsBaseline.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20
+  OBJ_FILE = CMakeFiles\ToolboxDLL.dir\baseline\AlsBaseline.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\ToolboxDLL.dir\baseline\AlsBaseline.cpp.obj.ddi.i
+
+build CMakeFiles/ToolboxDLL.dir/baseline/AlsBaseline.cpp.obj: CXX_COMPILER__ToolboxDLL_scanned_Debug C$:/Users/f.willems/CLionProjects/Toolbox/baseline/AlsBaseline.cpp | CMakeFiles/ToolboxDLL.dir/baseline/AlsBaseline.cpp.obj.modmap || cmake_object_order_depends_target_ToolboxDLL CMakeFiles/ToolboxDLL.dir/CXX.dd
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\ToolboxDLL.dir\baseline\AlsBaseline.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\ToolboxDLL.dir\baseline\AlsBaseline.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\ToolboxDLL.dir
+  OBJECT_FILE_DIR = CMakeFiles\ToolboxDLL.dir\baseline
+  TARGET_SUPPORT_DIR = CMakeFiles\ToolboxDLL.dir
+  dyndep = CMakeFiles/ToolboxDLL.dir/CXX.dd
+
+build CMakeFiles/ToolboxDLL.dir/nuclides/NuclidLibrary.cpp.obj.ddi: CXX_SCAN__ToolboxDLL_Debug C$:/Users/f.willems/CLionProjects/Toolbox/nuclides/NuclidLibrary.cpp || cmake_object_order_depends_target_ToolboxDLL
+  DEP_FILE = CMakeFiles\ToolboxDLL.dir\nuclides\NuclidLibrary.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\ToolboxDLL.dir\nuclides\NuclidLibrary.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20
+  OBJ_FILE = CMakeFiles\ToolboxDLL.dir\nuclides\NuclidLibrary.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\ToolboxDLL.dir\nuclides\NuclidLibrary.cpp.obj.ddi.i
+
+build CMakeFiles/ToolboxDLL.dir/nuclides/NuclidLibrary.cpp.obj: CXX_COMPILER__ToolboxDLL_scanned_Debug C$:/Users/f.willems/CLionProjects/Toolbox/nuclides/NuclidLibrary.cpp | CMakeFiles/ToolboxDLL.dir/nuclides/NuclidLibrary.cpp.obj.modmap || cmake_object_order_depends_target_ToolboxDLL CMakeFiles/ToolboxDLL.dir/CXX.dd
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\ToolboxDLL.dir\nuclides\NuclidLibrary.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\ToolboxDLL.dir\nuclides\NuclidLibrary.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\ToolboxDLL.dir
+  OBJECT_FILE_DIR = CMakeFiles\ToolboxDLL.dir\nuclides
+  TARGET_SUPPORT_DIR = CMakeFiles\ToolboxDLL.dir
+  dyndep = CMakeFiles/ToolboxDLL.dir/CXX.dd
+
+build CMakeFiles/ToolboxDLL.dir/finding/GammaMBibSearch.cpp.obj.ddi: CXX_SCAN__ToolboxDLL_Debug C$:/Users/f.willems/CLionProjects/Toolbox/finding/GammaMBibSearch.cpp || cmake_object_order_depends_target_ToolboxDLL
+  DEP_FILE = CMakeFiles\ToolboxDLL.dir\finding\GammaMBibSearch.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\ToolboxDLL.dir\finding\GammaMBibSearch.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20
+  OBJ_FILE = CMakeFiles\ToolboxDLL.dir\finding\GammaMBibSearch.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\ToolboxDLL.dir\finding\GammaMBibSearch.cpp.obj.ddi.i
+
+build CMakeFiles/ToolboxDLL.dir/finding/GammaMBibSearch.cpp.obj: CXX_COMPILER__ToolboxDLL_scanned_Debug C$:/Users/f.willems/CLionProjects/Toolbox/finding/GammaMBibSearch.cpp | CMakeFiles/ToolboxDLL.dir/finding/GammaMBibSearch.cpp.obj.modmap || cmake_object_order_depends_target_ToolboxDLL CMakeFiles/ToolboxDLL.dir/CXX.dd
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\ToolboxDLL.dir\finding\GammaMBibSearch.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\ToolboxDLL.dir\finding\GammaMBibSearch.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\ToolboxDLL.dir
+  OBJECT_FILE_DIR = CMakeFiles\ToolboxDLL.dir\finding
+  TARGET_SUPPORT_DIR = CMakeFiles\ToolboxDLL.dir
+  dyndep = CMakeFiles/ToolboxDLL.dir/CXX.dd
+
+build CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchDriver.cpp.obj.ddi: CXX_SCAN__ToolboxDLL_Debug C$:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchDriver.cpp || cmake_object_order_depends_target_ToolboxDLL
+  DEP_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchDriver.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchDriver.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20
+  OBJ_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchDriver.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchDriver.cpp.obj.ddi.i
+
+build CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchDriver.cpp.obj: CXX_COMPILER__ToolboxDLL_scanned_Debug C$:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchDriver.cpp | CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchDriver.cpp.obj.modmap || cmake_object_order_depends_target_ToolboxDLL CMakeFiles/ToolboxDLL.dir/CXX.dd
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchDriver.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchDriver.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\ToolboxDLL.dir
+  OBJECT_FILE_DIR = CMakeFiles\ToolboxDLL.dir\driver
+  TARGET_SUPPORT_DIR = CMakeFiles\ToolboxDLL.dir
+  dyndep = CMakeFiles/ToolboxDLL.dir/CXX.dd
+
+build CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchTest.cpp.obj.ddi: CXX_SCAN__ToolboxDLL_Debug C$:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchTest.cpp || cmake_object_order_depends_target_ToolboxDLL
+  DEP_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchTest.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchTest.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20
+  OBJ_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchTest.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchTest.cpp.obj.ddi.i
+
+build CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchTest.cpp.obj: CXX_COMPILER__ToolboxDLL_scanned_Debug C$:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchTest.cpp | CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchTest.cpp.obj.modmap || cmake_object_order_depends_target_ToolboxDLL CMakeFiles/ToolboxDLL.dir/CXX.dd
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchTest.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\ToolboxDLL.dir\driver\GammaMBibSearchTest.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\ToolboxDLL.dir
+  OBJECT_FILE_DIR = CMakeFiles\ToolboxDLL.dir\driver
+  TARGET_SUPPORT_DIR = CMakeFiles\ToolboxDLL.dir
+  dyndep = CMakeFiles/ToolboxDLL.dir/CXX.dd
+
 build CMakeFiles/ToolboxDLL.dir/api/API.cpp.obj.ddi: CXX_SCAN__ToolboxDLL_Debug C$:/Users/f.willems/CLionProjects/Toolbox/api/API.cpp || cmake_object_order_depends_target_ToolboxDLL
   DEP_FILE = CMakeFiles\ToolboxDLL.dir\api\API.cpp.obj.ddi.d
   DYNDEP_INTERMEDIATE_FILE = CMakeFiles\ToolboxDLL.dir\api\API.cpp.obj.ddi
@@ -148,7 +318,7 @@ build CMakeFiles/ToolboxDLL.dir/api/API.cpp.obj: CXX_COMPILER__ToolboxDLL_scanne
   TARGET_SUPPORT_DIR = CMakeFiles\ToolboxDLL.dir
   dyndep = CMakeFiles/ToolboxDLL.dir/CXX.dd
 
-build CMakeFiles/ToolboxDLL.dir/CXX.dd | CMakeFiles/ToolboxDLL.dir/CXXModules.json CMakeFiles/ToolboxDLL.dir/baseline/BinBaseline.cpp.obj.modmap CMakeFiles/ToolboxDLL.dir/api/API.cpp.obj.modmap: CXX_DYNDEP__ToolboxDLL_Debug CMakeFiles/ToolboxDLL.dir/baseline/BinBaseline.cpp.obj.ddi CMakeFiles/ToolboxDLL.dir/api/API.cpp.obj.ddi | C$:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir/CXXDependInfo.json
+build CMakeFiles/ToolboxDLL.dir/CXX.dd | CMakeFiles/ToolboxDLL.dir/CXXModules.json CMakeFiles/ToolboxDLL.dir/baseline/BinBaseline.cpp.obj.modmap CMakeFiles/ToolboxDLL.dir/baseline/AlsBaseline.cpp.obj.modmap CMakeFiles/ToolboxDLL.dir/nuclides/NuclidLibrary.cpp.obj.modmap CMakeFiles/ToolboxDLL.dir/finding/GammaMBibSearch.cpp.obj.modmap CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchDriver.cpp.obj.modmap CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchTest.cpp.obj.modmap CMakeFiles/ToolboxDLL.dir/api/API.cpp.obj.modmap: CXX_DYNDEP__ToolboxDLL_Debug CMakeFiles/ToolboxDLL.dir/baseline/BinBaseline.cpp.obj.ddi CMakeFiles/ToolboxDLL.dir/baseline/AlsBaseline.cpp.obj.ddi CMakeFiles/ToolboxDLL.dir/nuclides/NuclidLibrary.cpp.obj.ddi CMakeFiles/ToolboxDLL.dir/finding/GammaMBibSearch.cpp.obj.ddi CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchDriver.cpp.obj.ddi CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchTest.cpp.obj.ddi CMakeFiles/ToolboxDLL.dir/api/API.cpp.obj.ddi | C$:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir/CXXDependInfo.json
 
 
 # =============================================================================
@@ -158,7 +328,7 @@ build CMakeFiles/ToolboxDLL.dir/CXX.dd | CMakeFiles/ToolboxDLL.dir/CXXModules.js
 #############################################
 # Link the static library libToolboxDLL.a
 
-build libToolboxDLL.a: CXX_STATIC_LIBRARY_LINKER__ToolboxDLL_Debug CMakeFiles/ToolboxDLL.dir/baseline/BinBaseline.cpp.obj CMakeFiles/ToolboxDLL.dir/api/API.cpp.obj
+build libToolboxDLL.a: CXX_STATIC_LIBRARY_LINKER__ToolboxDLL_Debug CMakeFiles/ToolboxDLL.dir/baseline/BinBaseline.cpp.obj CMakeFiles/ToolboxDLL.dir/baseline/AlsBaseline.cpp.obj CMakeFiles/ToolboxDLL.dir/nuclides/NuclidLibrary.cpp.obj CMakeFiles/ToolboxDLL.dir/finding/GammaMBibSearch.cpp.obj CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchDriver.cpp.obj CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchTest.cpp.obj CMakeFiles/ToolboxDLL.dir/api/API.cpp.obj
   CONFIG = Debug
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\ToolboxDLL.dir

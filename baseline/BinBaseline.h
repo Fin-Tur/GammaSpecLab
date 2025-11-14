@@ -5,7 +5,7 @@
 #ifndef TOOLBOX_BINBASELINE_H
 #define TOOLBOX_BINBASELINE_H
 #include <vector>
-#include"..//models/Bin.h"
+#include"../models/Bin.h"
 
 namespace BinBaseline {
     std::vector<double> estimate(const std::vector<double> &counts);

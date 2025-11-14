@@ -1,11 +1,10 @@
 #include "GammaMBibSearch.h"
 #include <cmath>
-#include "thirdparty/eigen/Eigen/Sparse"
-#include "thirdparty/eigen/Eigen/QR"
-#include "baseline/BinBaseline.h"
-#include <FWHMC.h>
-#include <BibSearchCtx.h>
-
+#include "../thirdparty/eigen/Eigen/Sparse"
+#include "../thirdparty/eigen/Eigen/QR"
+#include "../baseline/BinBaseline.h"
+#include "../models/FWHMC.h"
+#include "../models/BibSearchCtx.h"
 using Eigen::MatrixXd; using Eigen::VectorXd;
 
 //Calculates spectral gradient of spectrum at given channel

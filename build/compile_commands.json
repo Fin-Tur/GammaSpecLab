@@ -7,6 +7,36 @@
 },
 {
   "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\Toolbox.dir\\baseline\\AlsBaseline.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\Toolbox.dir\\baseline\\AlsBaseline.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\baseline\\AlsBaseline.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/baseline/AlsBaseline.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir/baseline/AlsBaseline.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\Toolbox.dir\\nuclides\\NuclidLibrary.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\Toolbox.dir\\nuclides\\NuclidLibrary.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\nuclides\\NuclidLibrary.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/nuclides/NuclidLibrary.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir/nuclides/NuclidLibrary.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\Toolbox.dir\\finding\\GammaMBibSearch.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\Toolbox.dir\\finding\\GammaMBibSearch.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\finding\\GammaMBibSearch.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/finding/GammaMBibSearch.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir/finding/GammaMBibSearch.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\Toolbox.dir\\driver\\GammaMBibSearchDriver.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\Toolbox.dir\\driver\\GammaMBibSearchDriver.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\driver\\GammaMBibSearchDriver.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchDriver.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir/driver/GammaMBibSearchDriver.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\Toolbox.dir\\driver\\GammaMBibSearchTest.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\Toolbox.dir\\driver\\GammaMBibSearchTest.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\driver\\GammaMBibSearchTest.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchTest.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir/driver/GammaMBibSearchTest.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\Toolbox.dir\\main.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\Toolbox.dir\\main.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\main.cpp",
   "file": "C:/Users/f.willems/CLionProjects/Toolbox/main.cpp",
   "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/Toolbox.dir/main.cpp.obj"
@@ -16,6 +46,36 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\ToolboxDLL.dir\\baseline\\BinBaseline.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\ToolboxDLL.dir\\baseline\\BinBaseline.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\baseline\\BinBaseline.cpp",
   "file": "C:/Users/f.willems/CLionProjects/Toolbox/baseline/BinBaseline.cpp",
   "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir/baseline/BinBaseline.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\ToolboxDLL.dir\\baseline\\AlsBaseline.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\ToolboxDLL.dir\\baseline\\AlsBaseline.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\baseline\\AlsBaseline.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/baseline/AlsBaseline.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir/baseline/AlsBaseline.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\ToolboxDLL.dir\\nuclides\\NuclidLibrary.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\ToolboxDLL.dir\\nuclides\\NuclidLibrary.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\nuclides\\NuclidLibrary.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/nuclides/NuclidLibrary.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir/nuclides/NuclidLibrary.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\ToolboxDLL.dir\\finding\\GammaMBibSearch.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\ToolboxDLL.dir\\finding\\GammaMBibSearch.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\finding\\GammaMBibSearch.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/finding/GammaMBibSearch.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir/finding/GammaMBibSearch.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\ToolboxDLL.dir\\driver\\GammaMBibSearchDriver.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\ToolboxDLL.dir\\driver\\GammaMBibSearchDriver.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\driver\\GammaMBibSearchDriver.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchDriver.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchDriver.cpp.obj"
+},
+{
+  "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -g -std=gnu++20 -fmodules-ts -fmodule-mapper=CMakeFiles\\ToolboxDLL.dir\\driver\\GammaMBibSearchTest.cpp.obj.modmap -MD -fdeps-format=p1689r5 -x c++ -o CMakeFiles\\ToolboxDLL.dir\\driver\\GammaMBibSearchTest.cpp.obj -c C:\\Users\\f.willems\\CLionProjects\\Toolbox\\driver\\GammaMBibSearchTest.cpp",
+  "file": "C:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchTest.cpp",
+  "output": "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchTest.cpp.obj"
 },
 {
   "directory": "C:/Users/f.willems/CLionProjects/Toolbox/build",

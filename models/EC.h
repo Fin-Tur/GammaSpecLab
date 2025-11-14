@@ -1,3 +1,4 @@
+#include <cmath>
 #ifndef TOOLBOX_EC_H
 #define TOOLBOX_EC_H
 
