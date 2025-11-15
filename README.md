@@ -1,10 +1,11 @@
-# GammaDecayLib
+# GammaSpecLab
 
 A C++ library for scientific analysis of gamma-decay spectra. This
 project provides modular components for baseline estimation, peak
 finding, nuclide matching, and calibration workflows. It integrates
 numerical linear algebra via Eigen and exposes a unified API for
-spectrum-processing pipelines.
+spectrum-processing pipelines. All computational methods in this library are derived from, validated against, 
+and documented in accordance with established methodologies reported in peer-reviewed publications on gamma-decay spectroscopy.
 
 ## Overview
 
