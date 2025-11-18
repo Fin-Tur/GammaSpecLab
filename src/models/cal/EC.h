@@ -7,19 +7,19 @@ struct EC {
     double slope;
     double quad;
 
-    EC(double offset, double slope, double quad) : offset(offset), slope(slope), quad(quad) {}
+    //EC(double offset, double slope, double quad) : offset(offset), slope(slope), quad(quad) {}
 
-    inline double energy_at(int channel) const {
+    double energy_at(int channel) const {
         return offset + channel * slope + quad * channel * channel;
     }
 
-    inline double dEdk(int channel) const{
+    double dEdk(int channel) const{
         double gradient_k = slope + 2.0 * quad * channel;
         return gradient_k;
     }
 
     //EC only quadratic, so quadratic formula finds the channel- if deg(EC)>2, use binary search or approximation
-    inline int channel_at(double energy) const {
+    int channel_at(double energy) const {
 
         if(std::abs(quad) < 1e-12){
             if(std::abs(slope) < 1e-12){
@@ -37,11 +37,13 @@ struct EC {
 
         if(k1 >=0 && k2 >= 0){
             return static_cast<int>(std::min(k1, k2));
-        }else if(k1 >=0){
+        }if(k1 >=0){
             return static_cast<int>(k1);
-        }else if(k2 >=0){
+        }if(k2 >=0){
             return static_cast<int>(k2);
         }
+        //error vals
+        return -1;
     }
 };
 

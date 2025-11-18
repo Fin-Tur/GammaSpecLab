@@ -1,4 +1,4 @@
-#include "../models/BibSearchCtx.h"
+#include "../models/ctx/BibSearchCtx.h"
 #include <fstream>
 #include "../nuclides/NuclidLibrary.h"
 #include "../baseline/BinBaseline.h"
@@ -7,7 +7,7 @@
 class GammaMBibSearchDriver{
 
     public:
-        void initialize_driver_environment(const std::string& spec_path, const std::string& nuclide_lib_path, const FWHMC& fwhm_model, const EC& ec_model, const double Q0_conv_tol, const int iter);
+        void initialize_driver_environment(const std::string& spec_path, const std::string& nuclide_lib_path, const FWHMC& fwhm_model, const EC& ec_model, double Q0_conv_tol, int iter);
         std::vector<Nuclid> run(const double chi2_threshold);
 
     private:
@@ -21,16 +21,14 @@ class GammaMBibSearchDriver{
     if (!nuclideFile.is_open()) {
         throw std::runtime_error("Could not open nuclide library file.");
     }
-    double energy;
-    while(nuclideFile >> energy){
+     double energy;
+     while(nuclideFile >> energy){
         counts.push_back(energy);
-    }
+     }
+     nuclideFile.close();
 
     NuclidLibrary nuclideLibrary;
-    nuclideLibrary.loadLibrary("path/to/nuclide_library.txt");
-
-    FWHMC fwhm_model = FWHMC{1.0, 0.01, 1e-6};
-    EC ec_model = EC{0.0, 0.5, 1e-4};
+     nuclideLibrary.loadLibrary(nuclide_lib_path);
     std::vector<Nuclid> expected_nuclides = nuclideLibrary.getNuclideList();
 
     std::vector<double> baseline = BinBaseline::estimate(counts);

@@ -18,40 +18,40 @@
 	"module-dir" : "C:/Users/f.willems/CLionProjects/Toolbox/build/CMakeFiles/ToolboxDLL.dir",
 	"sources" : 
 	{
-		"CMakeFiles/ToolboxDLL.dir/api/API.cpp.obj" : 
+		"CMakeFiles/ToolboxDLL.dir/src/api/API.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/api/API.cpp"
+			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/src/api/API.cpp"
 		},
-		"CMakeFiles/ToolboxDLL.dir/baseline/AlsBaseline.cpp.obj" : 
+		"CMakeFiles/ToolboxDLL.dir/src/baseline/AlsBaseline.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/baseline/AlsBaseline.cpp"
+			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/src/baseline/AlsBaseline.cpp"
 		},
-		"CMakeFiles/ToolboxDLL.dir/baseline/BinBaseline.cpp.obj" : 
+		"CMakeFiles/ToolboxDLL.dir/src/baseline/BinBaseline.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/baseline/BinBaseline.cpp"
+			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/src/baseline/BinBaseline.cpp"
 		},
-		"CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchDriver.cpp.obj" : 
+		"CMakeFiles/ToolboxDLL.dir/src/driver/GammaMBibSearchTest.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchDriver.cpp"
+			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/src/driver/GammaMBibSearchTest.cpp"
 		},
-		"CMakeFiles/ToolboxDLL.dir/driver/GammaMBibSearchTest.cpp.obj" : 
+		"CMakeFiles/ToolboxDLL.dir/src/finding/GammaMBibSearch.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/driver/GammaMBibSearchTest.cpp"
+			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/src/finding/GammaMBibSearch.cpp"
 		},
-		"CMakeFiles/ToolboxDLL.dir/finding/GammaMBibSearch.cpp.obj" : 
+		"CMakeFiles/ToolboxDLL.dir/src/finding/SecondDerivateSearch.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/finding/GammaMBibSearch.cpp"
+			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/src/finding/SecondDerivateSearch.cpp"
 		},
-		"CMakeFiles/ToolboxDLL.dir/nuclides/NuclidLibrary.cpp.obj" : 
+		"CMakeFiles/ToolboxDLL.dir/src/nuclides/NuclidLibrary.cpp.obj" : 
 		{
 			"language" : "CXX",
-			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/nuclides/NuclidLibrary.cpp"
+			"source" : "C:/Users/f.willems/CLionProjects/Toolbox/src/nuclides/NuclidLibrary.cpp"
 		}
 	}
 }

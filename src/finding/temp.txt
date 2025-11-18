@@ -1,0 +1,64 @@
+
+//calcs linear_bg_ctx
+LinearBGCtx GammaMBibSearch::make_linear_bg_ctx(const BibSearchCtx &ctx, int lR, int rR, int n){
+    int N = rR - lR +1;
+    double B0 = 0.0, B1 = 0.0;
+    for(int i = std::max(0, lR - n); i <= lR -1; ++i){
+        B0 += ctx.counts[i];
+    }
+    for(int i = rR +1; i <= std::min(static_cast<int>(ctx.counts.size()-1), rR + n); ++i){
+        B1 += ctx.counts[i];
+    }
+    return {lR, rR, n, N, B0, B1};
+}
+
+//calcs y_linear after bg removal GM:(6)
+//eigentlich unnötig warum habe ich das überhaupt gesachrieben ??
+double GammaMBibSearch::calc_y_linear(const BibSearchCtx& ctx, int channel){
+    if(!(channel >= ctx.bg_ctx.lR && channel <= ctx.bg_ctx.rR)) {
+        return ctx.counts[channel];
+    }
+    int i = channel-ctx.bg_ctx.lR + 1;
+    double y_apostrophe = ctx.counts[channel] - (1.0/ctx.bg_ctx.n)*ctx.bg_ctx.B0 - (i*(ctx.bg_ctx.B1 - ctx.bg_ctx.B0))/(ctx.bg_ctx.n*(ctx.bg_ctx.N + 1));
+    return y_apostrophe;
+}
+
+
+//sigma2 according to Genie Manual with linear bg GM:(7)
+double GammaMBibSearch::sigma2_genie_linear_bg(const BibSearchCtx& ctx, double Ycorr, int i) {
+    int k = (i - ctx.bg_ctx.lR + 1);
+    double topTerm = ctx.bg_ctx.B0*(std::pow(ctx.bg_ctx.N+1-k, 2)) + ctx.bg_ctx.B1*(k*k);
+    double bottomTerm = std::pow(ctx.bg_ctx.n*(ctx.bg_ctx.N+1), 2);
+    return bottomTerm != 0.0 ? Ycorr + (topTerm / bottomTerm) : Ycorr;
+}
+
+//simple Gaussian model without corrections
+double GammaMBibSearch::gaussian_simple(const BibSearchCtx& ctx, int channel, int peak_center, int counts_center, double z) {
+    double exponent = -std::pow(ctx.ec_model.energy_at(channel) - ctx.ec_model.energy_at(peak_center), 2) / (z * z);
+    return (counts_center * std::exp(exponent));
+}
+
+//Gaussian corrected for spectral gradient
+double GammaMBibSearch::gaussian_corrected(const BibSearchCtx& ctx, int channel, int peak_center, int counts_center, double z, double spec_gradient, double Q0) {
+    double exponent = -std::pow(ctx.ec_model.energy_at(channel) - ctx.ec_model.energy_at(peak_center), 2) / (z * z);
+    double correction = (1 + Q0) * spec_gradient;
+    return (counts_center * std::exp(exponent) + correction);
+}
+
+//Gaussian corrected for spectral gradient and baseline offset
+double GammaMBibSearch::gaussian_corrected_with_offset(const BibSearchCtx& ctx, int channel, int peak_center, int counts_center, double z, double spec_gradient, double Q0, double B0, double B1) {
+    double exponent = -std::pow(ctx.ec_model.energy_at(channel) - ctx.ec_model.energy_at(peak_center), 2) / (z * z);
+    double correction = (1 + Q0) * spec_gradient;
+    double baseline = B0 + B1 * (ctx.ec_model.energy_at(channel) - ctx.ec_model.energy_at(peak_center));
+    return (counts_center * std::exp(exponent) + correction + baseline);
+}
+
+//=============
+
+    //LinearBGCtx make_linear_bg_ctx(const BibSearchCtx &ctx, int lR, int rR, int n);
+    //double calc_y_linear(const BibSearchCtx& ctx, int channel);
+    //double sigma2_genie_linear_bg(const BibSearchCtx& ctx, double Ycorr, int i);
+
+    //double gaussian_simple(const BibSearchCtx& ctx,int channel, int peak_center, int counts_center, double z);
+    //double gaussian_corrected(const BibSearchCtx& ctx, int channel, int peak_center, int counts_center, double z, double spec_gradient, double Q0);
+    //double gaussian_corrected_with_offset(const BibSearchCtx& ctx, int channel, int peak_center, int counts_center, double z, double spec_gradient, double Q0, double B0, double B1);

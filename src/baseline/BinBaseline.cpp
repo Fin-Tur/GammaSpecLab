@@ -2,17 +2,15 @@
 // Created by f.willems on 13.10.2025.
 //
 
-//TODO: Adding parameters for FWHM; rn in var_needed.h
 
 #include "BinBaseline.h"
-
+#include"../models/elements/Bin.h"
 #include <cmath>
-#include "../models/FWHMC.h"
+#include <iostream>
 
-static thread_local FWHMC fwhm_model;
 
-std::vector<double> BinBaseline::estimate(const std::vector<double> &counts) {
-
+std::vector<double> BinBaseline::estimate(const std::vector<double> &counts, const FWHMC fwhm_model) {
+    std::cout <<"Startet BinBaseline";
     //Magic Numbers -> Genie Manual :
     float k = 0.4;  
     int max_channels = 3400;
@@ -34,7 +32,8 @@ std::vector<double> BinBaseline::estimate(const std::vector<double> &counts) {
 
     //Create & Adjust bins & PLYs
     std::vector<std::vector<Bin>> plys(number_of_plys);
-    std::vector<Bin> bins(number_of_bins);
+    std::vector<Bin> bins;
+    bins.resize(number_of_bins);
     bins[0].min_x = 0;
     bins[0].bin_width = k * fwhm_model.fwhm_at(1);
     bins[0].center_x = bins[0].min_x + bins[0].bin_width * 0.5;
@@ -51,11 +50,11 @@ std::vector<double> BinBaseline::estimate(const std::vector<double> &counts) {
         for (int j = std::floor(bin.min_x); j < std::ceil(bin.min_x+bin.bin_width); ++j) {
             if (j >= n_counts) break;
             if (j - bin.min_x < 0) {
-                double w = 1 -(bin.min_x - j);
+                const double w = 1 -(bin.min_x - j);
                 sum_counts += counts[j] * w;
                 n += w;
             }else if (j + 1.0 > bin.min_x+bin.bin_width) {
-                double w = (bin.min_x+bin.bin_width) - j;
+                const double w = (bin.min_x+bin.bin_width) - j;
                 sum_counts += counts[j] * w;
                 n += w;
             }else {
@@ -78,7 +77,7 @@ std::vector<double> BinBaseline::estimate(const std::vector<double> &counts) {
     //Genie Manusal does not describe edge cases, since B'k is = Bk v (B'k-4 + B'k+4) /2
     //We simply skip first and last bin of each ply ?/ not a good solution but its not mentioned anywhere
     //-------------------------------------------------
-    for(int i = 0; i < iters; i++) {
+    for(int j = 0; j < iters; j++) {
         for(auto& ply : plys){
             for(int i = 1; i < ply.size()-1; i++) {
                 Bin& bin = ply[i];
@@ -97,8 +96,8 @@ std::vector<double> BinBaseline::estimate(const std::vector<double> &counts) {
     for(int i = 0; i < n_counts; i++) {
         E_i = std::numeric_limits<double>::infinity();
         for(auto& ply : plys) {
-            Bin* bin_left = nullptr;
-            Bin* bin_right = nullptr;
+            const Bin* bin_left = nullptr;
+            const Bin* bin_right = nullptr;
             for(int j = 0; j < ply.size()-1; j++) {
                 if(i >= ply[j].center_x && i < ply[j+1].center_x) {
                     bin_left = &ply[j];
@@ -108,10 +107,10 @@ std::vector<double> BinBaseline::estimate(const std::vector<double> &counts) {
             }
             if(bin_left == nullptr || bin_right == nullptr) continue;
             if(bin_right->center_x - bin_left->center_x < 1e-6) continue;
-            double slope = (bin_right->count_average - bin_left->count_average) / (bin_right->center_x - bin_left->center_x);
+            const double slope = (bin_right->count_average - bin_left->count_average) / (bin_right->center_x - bin_left->center_x);
             E_i = std::min(E_i, bin_left->count_average + slope * (i - bin_left->center_x));
-            delete bin_left;
-            delete bin_right;
+            //delete bin_left;
+            //delete bin_right;
         }
 
         counts_baseline[i] = std::min(E_i, counts[i]);

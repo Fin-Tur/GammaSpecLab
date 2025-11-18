@@ -2,23 +2,13 @@
 #define TOOLBOX_GAMMABIBSEARCH_H
 
 #include <vector>
-#include "../models/elements/Bin.h"
 #include "../models/elements/FitOut.h"
-#include "../models/ctx/LinearBGCtx.h"
-#include "../models/cal/EC.h"
 #include "../models/ctx/BibSearchCtx.h"
 
 namespace GammaMBibSearch {
 
-    LinearBGCtx make_linear_bg_ctx(const BibSearchCtx &ctx, int lR, int rR, int n);
-    double calc_y_linear(const BibSearchCtx& ctx, int channel);
-    double sigma2_genie_linear_bg(const BibSearchCtx& ctx, double Ycorr, int i);
     double calculate_spectral_gradient(const BibSearchCtx &ctx, int channel);
     double gaussian_base(const BibSearchCtx& ctx,int channel, int peak_center, double z);
-    double gaussian_simple(const BibSearchCtx& ctx,int channel, int peak_center, int counts_center, double z);
-    double gaussian_corrected(const BibSearchCtx& ctx, int channel, int peak_center, int counts_center, double z, double spec_gradient, double Q0);
-    double gaussian_corrected_with_offset(const BibSearchCtx& ctx, int channel, int peak_center, int counts_center, double z, double spec_gradient, double Q0, double B0, double B1);
-
     FitOut fit_once_energy(const BibSearchCtx &ctx, const std::vector<double>& Ycorr, int peak_center, double z_keV, double Ec_keV);
     FitOut fit_with_Q0_energy(const BibSearchCtx &ctx, const std::vector<double>& Ycorr, int peak_center, double z_keV);
 

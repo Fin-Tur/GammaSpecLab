@@ -1,13 +1,15 @@
 #include <vector>
 #include "LinearBGCtx.h"
-#include "FWHMC.h"
-#include "EC.h"
-#include "FitOut.h"
-#include "Nuclid.h"
+#include "../cal/FWHMC.h"
+#include "../cal/EC.h"
+#include "../elements/FitOut.h"
+#include "../elements/Nuclid.h"
 
 #pragma once
 
 struct BibSearchCtx{
+    public:
+    //BibSearchCtx();
 
     //set
     std::vector<Nuclid> expected_nuclides;
@@ -20,7 +22,7 @@ struct BibSearchCtx{
     double Q0_conv_tol;
     int iter;
 
-    //empty on initialize- filled within search
-    LinearBGCtx bg_ctx;
-    //FitOut last_fit;
+    //empty on initialize- filled within search renewed each iter
+    int lR;
+    int rR;
 };

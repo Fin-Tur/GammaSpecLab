@@ -1,5 +1,7 @@
 #include "SecondDerivateSearch.h"
+
 #include <numeric>
+#include <cmath>
 
 std::vector<Peak> SecondDerivateSearch::find_peaks(const SecDervCtx& ctx) {
 
@@ -56,15 +58,13 @@ std::vector<Peak> SecondDerivateSearch::find_peaks(const SecDervCtx& ctx) {
             sd += coeff_j * coeff_j * ctx.counts[channel + j];
             
         }
-
         ss = dd / std::sqrt(sd);
-
         if(ss < 0 && std::abs(ss) >= ctx.s_min){
             ss_values.emplace_back(channel, ss);
         }else{
             if(!ss_values.empty()){
                 //construct peak
-                peaks.emplace_back(construct_peak(ss_values));
+                peaks.emplace_back(construct_peak(ctx, ss_values));
                 ss_values.clear();
             }
         }        
@@ -72,14 +72,13 @@ std::vector<Peak> SecondDerivateSearch::find_peaks(const SecDervCtx& ctx) {
     }
 
     if(!ss_values.empty()){
-        peaks.emplace_back(construct_peak(ss_values));
+        peaks.emplace_back(construct_peak(ctx, ss_values));
         ss_values.clear();
     }
-
     return peaks;
 }
 
-    Peak SecondDerivateSearch::construct_peak(const std::vector<std::pair<int, double>>& ss_vals) {
+    Peak SecondDerivateSearch::construct_peak(const SecDervCtx& ctx , const std::vector<std::pair<int, double>>& ss_vals) {
         double c;
         double sum_top = 0.0;
         double sum_btm = 0.0;
@@ -88,6 +87,8 @@ std::vector<Peak> SecondDerivateSearch::find_peaks(const SecDervCtx& ctx) {
             sum_btm += ss;
         }
         c = (sum_btm != 0.0) ? sum_top / sum_btm : -1.0;
-        //TODO fill height and z
-        return Peak{c, 0.0, 0.0};
+        const double peak_height = ctx.counts[static_cast<int>(c)];
+        const double FWHM_keV = ctx.fwhm_cal.fwhm_at(ctx.ec_cal.energy_at(c));
+        const double z_keV = FWHM_keV / (std::sqrt(2.0*std::log(2)));
+        return Peak{c, peak_height, z_keV};
     }

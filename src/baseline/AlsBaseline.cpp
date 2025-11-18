@@ -1,7 +1,7 @@
 //
 // Created by f.willems on 07.08.2025.
 //
-#include "thirdparty/eigen/Eigen/Sparse"
+#include "../thirdparty/eigen/Eigen/Sparse"
 
 #include "AlsBaseline.h"
 

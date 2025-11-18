@@ -7,7 +7,8 @@ struct FWHMC
     double slope;
     double quad;
 
-    FWHMC(double offset, double slope, double quad) : offset(offset), slope(slope), quad(quad) {}
+    //FWHMC();
+    //FWHMC(double offset, double slope, double quad) : offset(offset), slope(slope), quad(quad) {}
 
     inline double fwhm_at(double energy) const {
         return offset + energy * slope + quad * energy * energy;

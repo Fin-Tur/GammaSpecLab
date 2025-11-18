@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
-#include "FWHMC.h"
-#include "EC.h"
-#include "Peak.h"
+#include "../cal/EC.h"
+#include "../cal/FWHMC.h"
+#include "../elements/Peak.h"
 
 struct SecDervCtx {
 

@@ -1,47 +1,45 @@
-#include <fstream>
-#include <assert.h>
-#include <cmath>
+#include "GammaMBibSearchTest.h"
 
+#include <fstream>
+#include <cassert>
+#include <cmath>
+#include <iostream>
+
+#include "../baseline/AlsBaseline.h"
 #include "../baseline/BinBaseline.h"
 #include "../nuclides/NuclidLibrary.h"
-#include "../models/BibSearchCtx.h"
 #include "../finding/GammaMBibSearch.h"
 
-class GammaMBibSearchTest{
-    public:
 
-    void initialize_testing_environment();
-    double get_median_diff_from_expected(const FitOut& fit, const Nuclid& nucl);
-    bool test_gamma_m_bib_search();
 
-    private:
-    BibSearchCtx ctx;
-};
-
-void GammaMBibSearchTest::initialize_testing_environment(){
-
+GammaMBibSearchTest::GammaMBibSearchTest() : ctx{} {
+    //this->ctx = BibSearchCtx{};
     std::vector<double> counts;
-    std::ifstream nuclideFile("path/to/spec.txt");
-    if (!nuclideFile.is_open()) {
-        throw std::runtime_error("Could not open nuclide library file.");
+    std::ifstream specFile("C:/Users/f.willems/CLionProjects/Toolbox/data/Co-2106.TKA");
+    if (!specFile.is_open()) {
+        throw std::runtime_error("Could not open spectrum file.");
     }
-    double energy;
-    while(nuclideFile >> energy){
-        counts.push_back(energy);
+
+    double count;
+    while (specFile >> count) {
+        counts.push_back(count);
     }
+    specFile.close();
 
     NuclidLibrary nuclideLibrary;
-    nuclideLibrary.loadLibrary("path/to/nuclide_library.txt");
+    nuclideLibrary.loadLibrary("C:/Users/f.willems/CLionProjects/Toolbox/data/nuclide_library.txt");
 
-    FWHMC fwhm_model = FWHMC{1.0, 0.01, 1e-6};
-    EC ec_model = EC{0.0, 0.5, 1e-4};
+    auto fwhm_model = FWHMC{3.930e-001, 3.523e-002, 0.0};
+    auto ec_model = EC{-2.694e-001, 1.982e-001, 0.0};
+
     std::vector<Nuclid> expected_nuclides = nuclideLibrary.getNuclideList();
 
-    std::vector<double> baseline = BinBaseline::estimate(ctx.counts);
+    std::vector<double> baseline = BinBaseline::estimate(counts, fwhm_model);
+    //std::vector<double> baseline = ALS_BASELINE::estimateBackgroundUsingALS();
 
-    ctx = BibSearchCtx{expected_nuclides, fwhm_model, ec_model, counts, baseline, 1e-3, 8};
-
+    this->ctx = BibSearchCtx{expected_nuclides, fwhm_model, ec_model, counts, baseline, 1e-3, 8};
 }
+
 
 bool GammaMBibSearchTest::test_gamma_m_bib_search(){
 
@@ -54,10 +52,11 @@ bool GammaMBibSearchTest::test_gamma_m_bib_search(){
     std::vector<std::pair<Nuclid, FitOut>> results = GammaMBibSearch::search(ctx);
     assert(!results.empty());
 
-    std::ofstream outputFile("path/to/output.txt");
+    std::ofstream outputFile("test.txt");
     if (!outputFile.is_open()) {
         throw std::runtime_error("Could not open output file.");
     }
+    
     for (const auto& fit : results) {
         outputFile << "Nuclide: Z=" << fit.first.atomic_number << " A=" << fit.first.mass_number << "\n";
         outputFile << "B0:" << fit.second.b0 << "  B1:" << fit.second.b1 << " Q0:" << fit.second.Q0 << " Counts(Center):" << fit.second.counts_center << "\n";
@@ -66,6 +65,8 @@ bool GammaMBibSearchTest::test_gamma_m_bib_search(){
 
     }
 
-
+    outputFile.close();
     return true;
 }
+
+

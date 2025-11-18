@@ -12,19 +12,20 @@ void NuclidLibrary::loadLibrary(const std::string& filepath) {
         throw std::runtime_error("Failed to open file");
     }
     
-    Nuclid nuclide;
+    Nuclid nuclide{};
     while (file >> nuclide.atomic_number >> nuclide.mass_number >> nuclide.half_life >> nuclide.gamma_energy >> nuclide.gamma_intensity) {
-        nuclide_map[{nuclide.atomic_number, nuclide.mass_number}] = nuclide;
+        nuclides.emplace_back(nuclide);
     }
+    file.close();
 }
 
 std::vector<Nuclid> NuclidLibrary::getNuclideList() const {
-    return std::vector<Nuclid>(nuclide_map.begin(), nuclide_map.end());
+    return this->nuclides;
 }
 
 std::vector<Nuclid> NuclidLibrary::getNuclidesNearEnergy(double energy_keV, double tolerance_keV) const {
     std::vector<Nuclid> res;
-    for(const auto& [key, nuc] : this->nuclide_map){
+    for(const auto& nuc : this->nuclides){
         if(std::abs(nuc.gamma_energy - energy_keV) <= tolerance_keV){
             res.push_back(nuc);
         }
@@ -33,8 +34,10 @@ std::vector<Nuclid> NuclidLibrary::getNuclidesNearEnergy(double energy_keV, doub
 }
 
 std::optional<Nuclid> NuclidLibrary::getNuclide(int atomic_number, int mass_number) const {
-    if (auto it = nuclide_map.find({atomic_number, mass_number}); it != nuclide_map.end()) {
-        return it->second;
+    for (const auto& nuc : this->nuclides) {
+        if (nuc.atomic_number == atomic_number && nuc.mass_number == mass_number) {
+            return nuc;
+        }
     }
     return std::nullopt;
 }
