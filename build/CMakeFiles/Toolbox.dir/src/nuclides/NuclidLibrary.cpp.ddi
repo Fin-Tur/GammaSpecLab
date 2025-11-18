@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles/Toolbox.dir/src/nuclides/NuclidLibrary.cpp.o",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

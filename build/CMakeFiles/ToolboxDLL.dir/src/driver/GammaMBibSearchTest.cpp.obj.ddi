@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles\\ToolboxDLL.dir\\src\\driver\\GammaMBibSearchTest.cpp.obj",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

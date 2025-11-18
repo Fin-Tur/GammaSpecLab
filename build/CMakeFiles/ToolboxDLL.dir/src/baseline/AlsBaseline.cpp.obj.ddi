@@ -1,0 +1,11 @@
+{
+"rules": [
+{
+"primary-output": "CMakeFiles\\ToolboxDLL.dir\\src\\baseline\\AlsBaseline.cpp.obj",
+"requires": [
+]
+}
+],
+"version": 0,
+"revision": 0
+}

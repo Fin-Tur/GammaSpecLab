@@ -1,0 +1,15 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles/ToolboxDLL.dir/src/baseline/BinBaseline.cpp.obj: dyndep
+
+build CMakeFiles/ToolboxDLL.dir/src/baseline/AlsBaseline.cpp.obj: dyndep
+
+build CMakeFiles/ToolboxDLL.dir/src/nuclides/NuclidLibrary.cpp.obj: dyndep
+
+build CMakeFiles/ToolboxDLL.dir/src/finding/GammaMBibSearch.cpp.obj: dyndep
+
+build CMakeFiles/ToolboxDLL.dir/src/driver/GammaMBibSearchDriver.cpp.obj: dyndep
+
+build CMakeFiles/ToolboxDLL.dir/src/driver/GammaMBibSearchTest.cpp.obj: dyndep
+
+build CMakeFiles/ToolboxDLL.dir/src/api/API.cpp.obj: dyndep
+
